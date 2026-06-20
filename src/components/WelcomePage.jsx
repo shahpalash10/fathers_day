@@ -89,29 +89,6 @@ export default function WelcomePage({ onStartMusic }) {
                     <BookOpen className="w-5 h-5 relative z-10" />
                     <span className="relative z-10 font-medium">Open Our Scrapbook</span>
                 </motion.button>
-
-                {/* Hand-drawn decoration */}
-                <motion.div
-                    className="mt-8 sm:mt-12 text-3xl sm:text-4xl select-none"
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 1, duration: 0.5 }}
-                >
-                    <motion.span
-                        className="inline-block"
-                        animate={{
-                            scale: [1, 1.08, 1],
-                            rotate: [0, 4, -4, 0],
-                        }}
-                        transition={{
-                            duration: 4,
-                            repeat: Number.POSITIVE_INFINITY,
-                            ease: "easeInOut",
-                        }}
-                    >
-                        🎨✨❤️
-                    </motion.span>
-                </motion.div>
             </div>
         </section>
     )

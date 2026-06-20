@@ -61,100 +61,56 @@ export default function FinalPage() {
 
   return (
     <section className="min-h-screen flex items-center justify-center py-8 sm:py-12 px-4 relative">
+      {/* Dashed scrapbook border */}
       <div className="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
         <div className="w-[90%] h-[90%] border-2 border-dashed border-accent-gold/40 rounded-3xl"></div>
       </div>
 
       <motion.div
-        className="text-center max-w-4xl mx-auto w-full relative z-10"
+        className="text-center max-w-3xl mx-auto w-full relative z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <motion.h2
-          className="text-4xl sm:text-6xl font-serif font-bold mb-6 text-accent-terracotta leading-tight"
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          Happy Father's Day!
-        </motion.h2>
-
+        {/* Styled note page card for a clean, personal look */}
         <motion.div
-          className="text-5xl sm:text-6xl mb-6 sm:mb-8 select-none"
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-        >
-          <motion.span
-            animate={{
-              rotate: [0, 6, -6, 0],
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 2.5,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
-            }}
-            className="inline-block"
-          >
-            🎉❤️💐
-          </motion.span>
-        </motion.div>
-
-        <motion.p
-          className="text-xl sm:text-2xl md:text-3xl text-stone-700 mb-6 font-serif font-normal px-4 max-w-2xl mx-auto"
-          initial={{ y: 15, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.7, duration: 0.6 }}
-        >
-          You are the best dad in the world, and we're so lucky to be your sons.
-        </motion.p>
-
-        <motion.p
-          className="text-2xl sm:text-3xl text-accent-terracotta mb-2 font-handwritten font-bold px-4"
-          initial={{ y: 15, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-        >
-          With all our love and gratitude!
-        </motion.p>
-
-        <motion.p
-          className="text-lg sm:text-xl text-accent-sage mb-8 font-serif italic px-4"
-          initial={{ y: 15, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1.1, duration: 0.6 }}
-        >
-          - Palash and Manthan
-        </motion.p>
-
-        {/* Celebration button */}
-        <motion.button
-          className="bg-accent-sage hover:bg-accent-sage/90 text-white font-medium py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-base sm:text-lg shadow-md hover:shadow-lg transition-all duration-300 mb-10 border border-accent-sage/20"
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1.3, duration: 0.6 }}
-          whileHover={{ scale: 1.02, y: -2 }}
-          whileTap={{ scale: 0.98 }}
-          onClick={handleCelebrate}
-        >
-          Celebrate More! 🎊
-        </motion.button>
-
-        {/* Thank you message styled as a scrapbook pocket/note */}
-        <motion.div
-          className="p-6 sm:p-8 bg-accent-gold/10 rounded-2xl border border-accent-gold/30 mx-4 sm:mx-0 max-w-2xl mx-auto relative shadow-sm"
+          className="bg-[#fdfcf9] border border-stone-200 rounded-xl p-8 sm:p-12 polaroid-shadow relative mx-4 sm:mx-0 overflow-visible"
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.6 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
         >
-          <div className="absolute -top-3 left-10 w-20 h-6 bg-accent-gold/20 backdrop-blur-[0.5px] border-l border-r border-accent-gold/15 rotate-[-5deg] z-20 pointer-events-none"></div>
-          <p className="text-base sm:text-lg text-stone-700 font-serif leading-relaxed">
-            Thank you for being the amazing father you are. Your love, guidance, and support mean everything to us.
-            <br />
-            <span className="text-accent-terracotta font-handwritten text-3xl font-bold block mt-2">Happy Father's Day, Dad!</span>
-          </p>
+          {/* Washi tape at the top center */}
+          <div className="absolute -top-3.5 left-1/2 transform -translate-x-1/2 w-32 h-7 bg-accent-gold/25 border-l border-r border-accent-gold/20 backdrop-blur-[0.5px] rotate-[1.5deg] z-20 shadow-sm pointer-events-none"></div>
+
+          <motion.h2
+            className="text-4xl sm:text-6xl font-serif font-bold mb-6 text-accent-terracotta leading-tight"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
+            Happy Father's Day!
+          </motion.h2>
+
+          <motion.p
+            className="text-xl sm:text-2xl text-stone-700 mb-8 font-serif leading-relaxed px-4 max-w-xl mx-auto"
+            initial={{ y: 15, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+          >
+            We are so incredibly lucky to have you as our father. Thank you for always being there with endless support, patience, and love.
+          </motion.p>
+
+          <motion.div
+            className="text-center mt-10"
+            initial={{ y: 15, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+          >
+            <p className="text-stone-500 font-serif italic text-base sm:text-lg">With all our love,</p>
+            <p className="text-accent-sage font-handwritten text-4xl font-bold mt-2">
+              Palash and Manthan
+            </p>
+          </motion.div>
         </motion.div>
       </motion.div>
     </section>

@@ -100,28 +100,6 @@ export default function PhotoGallery() {
                         ))}
                     </Swiper>
                 </motion.div>
-
-                <motion.div
-                    className="text-3xl sm:text-4xl select-none"
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 1, duration: 0.5 }}
-                >
-                    <motion.span
-                        initial={{ rotate: 0 }}
-                        animate={{
-                            rotate: [0, 6, -6, 0],
-                        }}
-                        transition={{
-                            duration: 4,
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                        }}
-                        className="inline-block"
-                    >
-                        📸✨
-                    </motion.span>
-                </motion.div>
             </motion.div>
         </section>
     )
